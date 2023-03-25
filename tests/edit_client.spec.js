@@ -19,14 +19,19 @@ test('edit client', async ({page}) => {
         console.log('error')
     }
 
+    await page.waitForTimeout(500)
     await page.locator('.editIcon').first().click()
     await page.keyboard.press('Control+A')
     await page.keyboard.press('Backspace')
+    await page.locator("[placeholder=Номер]").fill("8765")
+
     await page.waitForTimeout(500)
 
-    await page.click('text=Сохранить')
+    await page.locator("text=Сохранить").last().click()
     await page.waitForTimeout(500)
-    await page.click('text=Сохранить')
+
+
+    await page.click('button:text("Сохранить")')
     await page.waitForTimeout(500)
     await page.keyboard.press('Escape')
 
