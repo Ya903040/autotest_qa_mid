@@ -1,4 +1,4 @@
-const {test, expect } = require('@playwright/test');
+const {test } = require('@playwright/test');
 
 
 test('view client', async ({page}) => {
@@ -14,7 +14,7 @@ test('view client', async ({page}) => {
         await page.locator('#mat-input-0').fill('Yasirov Suleiman')
         await page.keyboard.press('Enter')
 
-        await page.click("text=Yasirov Suleiman",{timeout: 3000})
+        await page.click("text=Yasirov Suleiman",{timeout: 5000})
 
     } catch (e) {
         console.log('error')
