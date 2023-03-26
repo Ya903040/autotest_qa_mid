@@ -6,7 +6,7 @@
     file name - login.spec.js
 
         Example:
-    npx playwright test create_new_notification.spec.js
+    npx playwright test login.spec.js
 
 ![img.png](img.png)
 
