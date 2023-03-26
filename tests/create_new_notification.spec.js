@@ -24,6 +24,15 @@ test('create new notification', async ({page}) => {
 
     await page.locator('.material-icons').nth(2).click()
 
+    await page.locator('text=Template name').nth(-1).click()
+
+    await page.locator('.material-icons').nth(-2).click()
+
+
+    await page.locator('.push-col-save').click()
+
+
+
 
 
     await page.waitForTimeout(500)
